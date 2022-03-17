@@ -1,0 +1,32 @@
+{
+    "name": "ActiveCampaignAutomation",
+    "version": "0.4.0",
+    "manifest_version": 2,
+    "description": "Copy rows of List, From Name, From Email, Date, Hour, Minute, Email Subject line, and Email Body(HTML) from Google Sheets and activate this extension to start.",
+    "homepage_url": "https://upwork.com",
+    "background": {
+      "scripts": [
+        "src/background.js"
+      ],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_title": "ActiveCampaignAutomation",
+      "default_popup": "src/browser_action.html"
+    },
+    "icons": { "16": "icon16.png",
+                "32": "icon32.png",
+               "48": "icon48.png",
+               "128": "icon128.png" },
+    "permissions": [
+      "*://*/*",
+      "webRequest",
+      "webRequestBlocking",
+      "activeTab",
+      "tabs",
+      "clipboardRead",
+      "storage"
+
+    ]
+  }
+  

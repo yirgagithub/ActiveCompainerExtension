@@ -1,0 +1,80 @@
+<!doctype html>
+
+<style type="text/css">
+	body {
+		margin: 16px;
+		min-width: 300px;
+	}
+	#textArea {
+		border: ridge 1px;
+		display: block;
+		width: 500px;
+		max-height: 100px;
+		overflow: auto;
+		padding: 2px 4px;
+		margin: 4px 0px 10px 0px;
+	}
+
+	#startButton {
+		margin-top: 14px;
+		padding: 5px 20px;
+		margin-bottom: 20px;
+		float:right;
+	}
+
+	#emailTable {
+		width: 640px;
+		border-spacing: 0;
+		border: 1px solid #777;
+	}
+
+	#emailTable tbody tr:nth-child(even) {background: #EEE}
+	#emailTable tbody tr:nth-child(odd) {background: #FFF}
+	#emailTable tbody td {
+		padding: 2px 10px;
+	}
+	#emailTable tbody td:nth-child(4) {
+		max-width: 240px;
+	}
+	#emailTable xmp {
+		max-height: 20px;
+		overflow: auto;
+	}
+	#emailTable xmp::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+	}
+	#emailTable th {
+		background: #555;
+		color: white;
+		padding: 6px 0px;
+	}
+</style>
+
+<div id="mainPopup">
+	<h4 style="text-align:center">ActiveCampaignAutomation 1.0</h4>
+
+	<div id="instructions">
+		<b>Instructions:</b> Copy rows of List, From Name, From Email, Date, Hour, Minute, Email Subject line, and Email Body(HTML) from Google Sheets and activate this extension to start..
+	</div>
+
+	<table id="emailTable" style="display: none;">
+		<thead>
+			<tr>
+				<th width="100">List</th>
+				<th width="100">From Name</th>
+				<th width="100">From Email</th>
+				<th width="100">Date</th>
+				<th width="100">Hour</th>
+				<th width="100">Minute</th>
+				<th width="100">Email Subject</th>
+				<th width="600">Email Body</th>
+			</tr>
+		</thead>
+		<tbody id ="emailTableBody">
+		</tbody>
+	</table>
+
+	<input type="button" value="SCHEDULE EMAILS" id="startButton" style="display: none;" />
+</div>
+
+<script src="browser_action.js"></script>
